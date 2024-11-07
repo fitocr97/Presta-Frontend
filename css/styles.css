@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+    
+}
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.container-log {
+    margin: 10px auto;
+    padding: 2%;
+    margin-top: 10%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(233, 232, 232, 0.1);
+}
+ 
+#title-login{
+    text-align: center;
+}
+
+#new-client{
+    margin-top: 10px;
+    margin-left: 10px;
+}
