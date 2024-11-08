@@ -33,7 +33,29 @@
       </nav>
 
       <main>
-        <div id="contactInfo"></div>
+        <div class="card-client">
+          <h1>Información Cliente</h1>
+          <div id="contactInfo"></div>
+          <div>
+            <table class="table tabla-primary">
+              <thead class="color-table">
+                <tr>
+                  <th scope="col">Abono</th>
+                  <th scope="col">Saldo</th>
+                  <th scope="col">Fecha</th>
+                </tr>
+              </thead>
+              <tbody id="AcountInfo">
+                <!-- Aquí se llenará la tabla dinámicamente -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="client-buttons">
+            <a id="btn-abo" class="btn btn-success my-2 my-sm-0" href="/abonar.html">Abonar</a>
+            <a id="btn-edi" class="btn btn-primary my-2 my-sm-0" href="/update_client.html">Editar</a>
+            <a id="btn-del" class="btn btn-danger my-2 my-sm-0" href="#">Eliminar</a>
+        </div>
       </main>
 
     <footer>
@@ -54,6 +76,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="/js/client.js"></script> 
+    <script src="/js/accounts.js"></script> 
+    <script src="/js/delete.js"></script> 
     
 </body>
 </html>

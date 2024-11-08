@@ -32,3 +32,26 @@ footer {
     margin-left: 10px;
 }
 
+.card-client{
+    margin: 10px;
+    padding: 4%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.644);
+    border-radius: 8px;
+}
+
+.client-div{
+    padding: 4%;
+}
+
+.client-buttons{
+ margin-top: 10px;
+ margin-left: 10px;
+ padding: 1%;   
+}
+
+.card-general{
+    margin: 10px;
+    padding: 4%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.644);
+    border-radius: 8px;
+}

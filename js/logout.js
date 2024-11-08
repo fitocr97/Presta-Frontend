@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function logoutFunc() {
     const logout = document.querySelector('#logout'); // Busca el botón de logout
-    console.log("entro al logout")
+    
     if (logout) {
         // Solo añade el eventListener si el botón existe
         logout.addEventListener('click', () => {

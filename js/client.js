@@ -36,7 +36,7 @@ if (cud) {  // Asegurarte de que 'cud' esté presente en la URL
                 <p><strong>Dirección:</strong> ${client.address}</p>
                 <p><strong>Préstamo:</strong> ${client.loan}</p>
                 <p><strong>Intereses:</strong> ${client.interest}</p>
-                <p><strong>Balance:</strong> ${client.balance}</p>
+                <p><strong>Total a pagar:</strong> ${client.total}</p>
                 <p><strong>Tipo:</strong> ${client.type}</p>
                 <p><strong>Estado:</strong> ${client.status}</p>
             `;
@@ -44,6 +44,7 @@ if (cud) {  // Asegurarte de que 'cud' esté presente en la URL
         .catch(error => {
             console.error('Error al hacer la solicitud:', error);
         });
+
     }
 } else {
     console.error('No se pasó un cud en la URL.');

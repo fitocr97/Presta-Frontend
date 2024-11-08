@@ -1,8 +1,17 @@
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+const aid = getQueryParam('cud'); // Obtenemos el valor de cud de la URL
+console.log('cud:' + aid)
+
+
 const token = localStorage.getItem('token');
 if (!token) {
     console.error("No se encontró el token. Por favor, inicia sesión.");
 } else {
-    const url = 'http://localhost:3000/prestaapi/v1/clients/weekly';
+    const url = `http://localhost:3000/prestaapi/v1/accounts/id?aid=${aid}`;
     axios.get(url, {
         headers: {
             'Authorization': `Bearer ${token}`
@@ -10,21 +19,16 @@ if (!token) {
     })
     .then(response => {
         console.log(response.data.msg);
-        const users = response.data.msg;
-        const tableBody = document.getElementById('clientsWeekly');
+        const accounts = response.data.msg;
+        const tableBody = document.getElementById('AcountInfo');
         tableBody.innerHTML = ''; // Limpiar la tabla
 
-        users.forEach(client => {
+        accounts.forEach(acount => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${client.name}</td>
-                <td>${client.phone}</td>
-                <td>${client.status}</td>
-                <td>
-                  <button class="btn btn-primary view-contact-btn" data-cud="${client.cud}">
-                    Abrir
-                  </button>
-                </td>
+                <td>${acount.payment}</td>
+                <td>${acount.balance}</td>
+                <td>${acount.date}</td>
             `;
             tableBody.appendChild(row);
         });

@@ -33,7 +33,22 @@
       </nav>
 
       <main>
-
+        <div class="client-div">
+          <h2>Clientes Quincenales</h2>
+          <table class="table tabla-primary">
+            <thead class="color-table">
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Estado</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="clientsbiWeekly">
+              <!-- Aquí se llenará la tabla dinámicamente -->
+            </tbody>
+          </table>
+        </div>
       </main>
 
       <footer>
@@ -43,7 +58,10 @@
         </div>
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/logout.js"></script> 
+    <script src="/js/biweekly.js"></script>
     <script>
         // Llama a las funciones después de haber cargado los archivos JavaScript
         logoutFunc();
