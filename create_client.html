@@ -32,7 +32,50 @@
         </div>
       </nav>
 
-      <main></main>
+      <main>
+        <div class="card-general">
+          
+          <form id="createClient">
+            <h4 class="text-info">Agregar Cliente</h4>
+            <div>
+                <label for="name" class="form-label mt-4">Nombre</label>
+                <input type="text" class="form-control" name="name" aria-describedby="name" placeholder="Nombre del cliente">
+            </div>
+            <div>
+              <label for="Telefono" class="form-label mt-4">Telefono</label>
+              <input type="text" class="form-control" name="phone" aria-describedby="phone" placeholder="Telefono">
+            </div>
+            <div>
+                <label for="Dirección" class="form-label mt-4">Dirección</label>
+                <input type="text" class="form-control" name="address" aria-describedby="address" placeholder="Dirección">
+            </div>
+            <div>
+                <label for="loan" class="form-label mt-4">Prestamo</label>
+                <input type="text" class="form-control" name="loan" aria-describedby="loan" placeholder="Cantidad Prestamo">
+            </div>
+            <div>
+              <label for="interest" class="form-label mt-4">Interes</label>
+              <input type="text" class="form-control" name="interest" aria-describedby="interest" placeholder="Intereses">
+          </div>
+            <div>
+                <label for="total" class="form-label mt-4">Total</label>
+                <input type="text" class="form-control" name="total" aria-describedby="total" placeholder="Total">
+            </div>
+            <div>
+              <label for="exampleSelect1" class="form-label mt-4">Tipo</label>
+              <select class="form-select" id="tipo" name="tipo">
+                <option value="semanal">Semanal</option>
+                <option value="quincenal">Quincenal</option>
+              </select>
+          </div>
+            <div style="margin-top: 2%;">
+                <div style="margin-top: 1%;">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <a id="btn-reg" class="btn btn-secondary my-2 my-sm-0" href="/dashboard.html">Volver</a>
+            </div>
+        </form>
+        </div>
+      </main>
 
 
     <footer>
@@ -42,7 +85,9 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/logout.js"></script> 
+    <script src="/js/create_client.js"></script> 
     <script>
         // Llama a las funciones después de haber cargado los archivos JavaScript
         logoutFunc();
