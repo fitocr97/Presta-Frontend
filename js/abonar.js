@@ -54,7 +54,7 @@ function abonar(){
             console.log(abonar)
             console.log("mostro")
             /
-            axios.post(`http://localhost:3000/prestaapi/v1/accounts/create`, abonar, {
+            axios.post(`https://presta-backend-production.up.railway.app/prestaapi/v1/accounts/create`, abonar, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'

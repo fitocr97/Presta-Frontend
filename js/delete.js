@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // URL del endpoint para eliminar (POST)
-            const url = 'http://localhost:3000/prestaapi/v1/clients/delete';
+            const url = 'https://presta-backend-production.up.railway.app/prestaapi/v1/clients/delete';
 
             // Realizar la solicitud POST con axios
             axios.post(url, { cud: cudDelete }, {  // Enviamos el cud en el cuerpo de la solicitud

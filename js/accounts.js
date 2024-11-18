@@ -11,7 +11,7 @@ const token = localStorage.getItem('token');
 if (!token) {
     console.error("No se encontró el token. Por favor, inicia sesión.");
 } else {
-    const url = `http://localhost:3000/prestaapi/v1/accounts/id?aid=${aid}`;
+    const url = `https://presta-backend-production.up.railway.app/prestaapi/v1/accounts/id?aid=${aid}`;
     axios.get(url, {
         headers: {
             'Authorization': `Bearer ${token}`

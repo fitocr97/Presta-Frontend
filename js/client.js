@@ -25,7 +25,7 @@ if (cud) {  // Asegurarte de que 'cud' esté presente en la URL
     if (!token) {
         console.error("No se encontró el token. Por favor, inicia sesión.");
     } else {
-        const url = `http://localhost:3000/prestaapi/v1/clients/id?cud=${cud}`;  // Correcta interpolación del parámetro 'cud'
+        const url = `https://presta-backend-production.up.railway.app/prestaapi/v1/clients/id?cud=${cud}`;  // Correcta interpolación del parámetro 'cud'
 
         axios.get(url, {
             headers: {

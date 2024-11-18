@@ -23,7 +23,7 @@ function crearClient() {
             console.log("Creando Client...");
             console.log(name, type, phone, address, loan, interest, total, balance)
             const token = localStorage.getItem('token'); // Asegúrate de que el token esté almacenado
-            const url = 'http://localhost:3000/prestaapi/v1/clients/create';
+            const url = 'https://presta-backend-production.up.railway.app/prestaapi/v1/clients/create';
 
             // Realizar la solicitud POST con Axios
             const response = await axios.post(url, {

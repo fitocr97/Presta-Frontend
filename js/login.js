@@ -17,7 +17,7 @@ function checkAuthToken() {
             
             // Enviar la solicitud POST a la API
             //https://ticoapi-production.up.railway.app/tico/v1/users/login
-            const response = await axios.post('http://localhost:3000/prestaapi/v1/users/login', { 
+            const response = await axios.post('https://presta-backend-production.up.railway.app/prestaapi/v1/users/login', { 
                 email,
                 password
             });
