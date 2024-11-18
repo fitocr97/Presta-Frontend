@@ -35,19 +35,19 @@
       <main>
         <div class="client-div">
           <h4 class="text-info">Clientes Semanales</h4>
-          <table class="table tabla-primary">
-            <thead class="color-table">
-              <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Telefono</th>
-                <th scope="col">Estado</th>
-                <th scope="col"></th>
-              </tr>
+          <table class="table table-custom">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Saldo</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col"></th>
+                </tr>
             </thead>
             <tbody id="clientsWeekly">
-              <!-- Aquí se llenará la tabla dinámicamente -->
+                <!-- Aquí se llenará la tabla dinámicamente -->
             </tbody>
-          </table>
+        </table>
         </div>
       </main>
 
@@ -65,13 +65,11 @@
 
     <script src="/js/logout.js"></script> 
     <script src="/js/weekly.js"></script>
+    <script src="/js/auth.js"></script>
     <script>
         // Llama a las funciones después de haber cargado los archivos JavaScript
         logoutFunc();
     </script>
 
-
-    
-    
 </body>
 </html>

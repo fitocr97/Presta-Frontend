@@ -7,6 +7,17 @@ function getQueryParam(param) {
 const cud = getQueryParam('cud'); // Obtenemos el valor de cud de la URL
 console.log('cud:' + cud)
 
+const abonarBtn = document.getElementById('btn-abo');
+const editarBtn = document.getElementById('btn-edi');
+
+if (abonarBtn && editarBtn && cud ) {
+    // Modificar los enlaces de los botones con el parámetro 'cud'
+    abonarBtn.href = `/abonar.html?cud=${cud}`;
+    editarBtn.href = `/update_client.html?cud=${cud}`;
+} else {
+    console.error('No se pudo asignar el valor de cud a los botones.');
+}
+
 
 if (cud) {  // Asegurarte de que 'cud' esté presente en la URL
     const token = localStorage.getItem('token');  // Obtener el token de localStorage
@@ -36,7 +47,7 @@ if (cud) {  // Asegurarte de que 'cud' esté presente en la URL
                 <p><strong>Dirección:</strong> ${client.address}</p>
                 <p><strong>Préstamo:</strong> ${client.loan}</p>
                 <p><strong>Intereses:</strong> ${client.interest}</p>
-                <p><strong>Total a pagar:</strong> ${client.total}</p>
+                <p class="text-danger"><strong>Total a pagar:</strong> ${client.total}</p>
                 <p><strong>Tipo:</strong> ${client.type}</p>
                 <p><strong>Estado:</strong> ${client.status}</p>
             `;

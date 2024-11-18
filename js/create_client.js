@@ -44,7 +44,7 @@ function crearClient() {
 
             const data = response.data; // Obtener los datos de la respuesta
             console.log(data); // Ver la respuesta en la consola
-            alert("Se agrego el proveedor.");
+            alert("Se agrego el cliente.");
 
             // Redirigir al usuario después de crear el producto
             window.location.href = '/dashboard.html';

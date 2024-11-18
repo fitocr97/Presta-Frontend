@@ -50,8 +50,59 @@ footer {
 }
 
 .card-general{
-    margin: 10px;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2%;
     padding: 4%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.644);
     border-radius: 8px;
+}
+
+
+
+.table-custom th, .table-custom td {
+    padding: 5px;
+}
+
+.table-custom tr.status-pago {
+    background-color: #338a47 !important; /* Verde para 'Pago' */
+    color: #020202 !important; /* Texto verde */
+}
+
+.table-custom tr.status-falta {
+    background-color: #cc9297 !important; /* Rojo para 'Falta' */
+    color: #0a0a0a !important; /* Texto rojo */
+}
+
+.table-custom tr.status-default{
+    background-color: rgb(136, 138, 139);
+    color: #161616;
+}
+
+
+table{
+    background-color: transparent !important;
+    width: 100%;
+}
+
+
+
+/* Asegurando que la tabla sea responsive */
+@media screen and (max-width: 768px) {
+    .table-custom {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .card-general{
+        margin: 10px;
+        padding: 4%;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.644);
+        border-radius: 8px;
+    }
 }
