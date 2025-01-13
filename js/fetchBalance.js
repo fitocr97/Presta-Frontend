@@ -1,7 +1,19 @@
-// Llamada a la API para obtener el total de balance usando Axios
 const fetchTotalBalance = async () => {
     try {
-        const response = await axios.get('https://presta-backend-production.up.railway.app/prestaapi/v1/accounts/balances');
+        const token = localStorage.getItem('token'); // Suponiendo que el token está almacenado en localStorage
+        
+        if (!token) {
+            console.error('No se encontró un token en localStorage');
+            return;
+        }
+
+        const response = await axios.get('http://localhost:3000/api/accounts/balance', {
+            headers: {
+                'Authorization': `Bearer ${token}`, // Pasar el Bearer Token en el header
+                'Content-Type': 'application/json', // Asegurar que el Content-Type sea JSON
+            },
+        });
+
         if (response.data.ok) {
             const totalBalance = parseInt(response.data.totalBalance);
             const balanceElement = document.getElementById('monto-prestado');
